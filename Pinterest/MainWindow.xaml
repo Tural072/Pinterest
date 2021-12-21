@@ -1,0 +1,18 @@
+﻿<Window x:Class="Pinterest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pinterest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="90" Width="400" WindowStyle="None">
+    <Grid>
+        <StackPanel>
+            <WrapPanel>
+                <Button Content="Download Image" Margin="10,10,10,0"></Button>
+                <TextBlock x:Name="pathTxtblck" Margin="10,10,10,0" Width="250"></TextBlock>
+            </WrapPanel>
+            <Button Content="SEND" Margin="10,10,10,0" Width="50" HorizontalAlignment="Left"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
