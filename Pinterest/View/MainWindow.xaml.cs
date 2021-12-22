@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pinterest.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace Pinterest
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainWindowViewModel(this);
         }
     }
 }
