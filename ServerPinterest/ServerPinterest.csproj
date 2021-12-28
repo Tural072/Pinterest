@@ -97,6 +97,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Pinterest\ClientPintertest.csproj">
+      <Project>{E3A5ADBC-B355-4109-B71B-256BED56C098}</Project>
+      <Name>ClientPintertest</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

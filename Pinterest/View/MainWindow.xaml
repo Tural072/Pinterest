@@ -9,10 +9,10 @@
     <Grid>
         <StackPanel>
             <WrapPanel>
-                <Button Content="Download Image" Margin="10,10,10,0"></Button>
+                <Button Command="{Binding SelectBtnCommand}" Content="Download Image" Margin="10,10,10,0"></Button>
                 <TextBlock x:Name="pathTxtblck" Margin="10,10,10,0" Width="250"></TextBlock>
             </WrapPanel>
-            <Button Content="SEND" Margin="10,10,10,0" Width="50" HorizontalAlignment="Left"></Button>
+            <Button Command="{Binding SendBtnCommand}" Content="SEND" Margin="10,10,10,0" Width="50" HorizontalAlignment="Left"></Button>
         </StackPanel>
     </Grid>
 </Window>

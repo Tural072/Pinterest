@@ -7,9 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="500" WindowStyle="None">
     <Grid>
-        <StackPanel>
-            <Label Content="IMAGES" HorizontalAlignment="Center" FontFamily="comic sans ms" FontSize="20"></Label>
-            <ListBox></ListBox>
+        <StackPanel Background="Transparent" >
+            <TextBlock TextAlignment="Center" FontSize="28" Text="Images"></TextBlock>
+            <ListBox  x:Name="myListView" Background="LightGray" Height="300" Margin="50,0,50,0">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Vertical" Margin="5,5,5,5" Background="White">
+                            <Image Stretch="Fill" Source="{Binding ImagePath}"  Margin="5,5,5,5" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Button Content="Connect" FontSize="25" Width="300" Height="60" Command="{Binding a}" Margin="0,50,0,0"/>
         </StackPanel>
+
+
     </Grid>
 </Window>
