@@ -26,14 +26,10 @@ namespace Pinterest.Extencions
         }
         public static string GetImagePath(byte[] buffer, int counter)
         {
-
-
-
-            //Image x = (Bitmap)((new ImageConverter()).ConvertFrom(buffer));
             Image x = (Bitmap)((new ImageConverter()).ConvertFrom(buffer));
             Image bitmap1 = new Bitmap(x);
             bitmap1.Save($@"C:\Users\tahi_ri96\source\repos\Pinteres\ServerPinterest\bin\Debug\image{counter}.png");
-            var imagepath = $@"C:\Users\tahi_ri96\source\repos\Pinteres\ServerPinterest\bin\Debug\image{counter}.png";
+            var imagepath = $@"C:\Users\mehsu\source\repos\SendImageClientToServer\SendImageClientToServer\bin\Debug\image{counter}.png";
             return imagepath;
         }
         public static byte[] GetBytesOfImage(string path)

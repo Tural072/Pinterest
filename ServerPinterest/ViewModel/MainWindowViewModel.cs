@@ -17,7 +17,6 @@ namespace ServerPinterest.ViewModel
 {
     public class MainWindowViewModel:BaseViewModel
     {
-
         public RelayCommand a { get; set; }
         public List<Images> images { get; set; }
         public string Path { get; set; }
@@ -27,12 +26,7 @@ namespace ServerPinterest.ViewModel
         int count = 0;
         public MainWindowViewModel(MainWindow mainWindow)
         {
-
-
-
             images = new List<Images>();
-
-
 
             a = new RelayCommand((sender) =>
             {
@@ -42,8 +36,6 @@ namespace ServerPinterest.ViewModel
                     var ep = new IPEndPoint(ip, 27001);
                     listener = new TcpListener(ep);
                     listener.Start();
-
-
 
                     while (true)
                     {
@@ -64,50 +56,16 @@ namespace ServerPinterest.ViewModel
                                     var msg = br.ReadString();
                                     Path = ImageHelper.GetImagePath(buffer: bytes, counter: count);
                                     break;
-
-
-
                                 }
                                 App.Current.Dispatcher.Invoke(() =>
                                 {
                                     mainWindow.myListView.Items.Add(new Images { ImagePath = Path });
-
-
-
                                 });
                             });
-
-
-
                         });
-
-
-
-
-
                     }
                 });
-
-
-
             });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
     }
 }

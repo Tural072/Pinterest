@@ -18,32 +18,15 @@ namespace Pinterest.ViewModel
         public RelayCommand SelectBtnCommand { get; set; }
         public RelayCommand SendBtnCommand { get; set; }
 
-
-
-
         byte[] b;
-
-
-
 
         public MainWindowViewModel(MainWindow mainWindow)
         {
-
-
-
-
-
             SelectBtnCommand = new RelayCommand((sender) =>
             {
-
-
-
                 try
                 {
                     var open = new Microsoft.Win32.OpenFileDialog();
-
-
-
                     open.Multiselect = false;
                     open.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
                     open.ShowDialog();
@@ -53,16 +36,6 @@ namespace Pinterest.ViewModel
                 {
                     MessageBox.Show(ex.Message);
                 }
-
-
-
-
-
-
-
-
-
-
             });
             SendBtnCommand = new RelayCommand((sender) =>
             {
@@ -79,19 +52,11 @@ namespace Pinterest.ViewModel
                         {
                             while (true)
                             {
-
-
-
                                 var stream = client.GetStream();
                                 var bw = new BinaryWriter(stream);
                                 bw.Write(b);
                             };
                         });
-
-
-
-
-
                     }
                     else
                     {
@@ -102,13 +67,7 @@ namespace Pinterest.ViewModel
                 {
                     Console.WriteLine(ex.Message);
                 }
-
-
-
             });
-
-
-
         }
     }
 }
